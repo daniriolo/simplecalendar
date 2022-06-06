@@ -1,0 +1,91 @@
+.calendar-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ .calendar{
+   width:80vw;
+   height: 60vh;
+   background-color:rgb(230, 230, 230);
+   box-shadow: 0 3px 5px rgba(0,0,0,0.4);
+   border-radius: 10px;
+ }
+ 
+ 
+ .month{
+   border-radius: 10px 10px 0 0;
+   color: rgb(230, 230, 230);
+   width:100%;
+   height:12vh;
+   background-color:rgb(61, 134, 63);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   text-align: center;
+   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+   padding: 1em 0;
+ }
+ .month i{
+   font-size: 2em;
+   padding:0 1em;
+   cursor: pointer;
+ }
+ .month h2{
+   padding-top: 15px;
+   font-size: 1.5em;
+   font-weight: lighter;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+ }
+ .month p{
+   font-size:1.5em;
+   font-weight: lighter;
+ }
+ .weekdays{
+   padding-top:1vh;
+   width: 100%;
+   height: 6vh;
+   display: flex;
+   align-items: center;
+ }
+ .weekdays div{
+   font-size: 1.5em;
+   font-weight: lighter;
+   width: calc(79vw / 7);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ .days {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+ }
+ 
+ .days div {
+   font-size: 1.5em;
+   font-weight:lighter;
+   width: calc(79vw / 7);
+   height: calc(40vh/6);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: background-color 0.2s;
+ }
+ 
+ .days div:hover:not(.today) {
+   background-color: rgb(112, 112, 112);
+   color:white;
+   border: 0.2rem solid #777;
+   cursor: pointer;
+ }
+ .prev-date,
+ .next-date {
+   opacity: 0.4;
+ }
+ 
+ .today {
+   background-color: rgb(61, 134, 63);
+   color: white;
+   border: 2px solid rgba(61, 134, 63,0.5);
+ }
